@@ -43,8 +43,12 @@ export const Select = ({
           }}
         >
           <option selected>{placeholder}</option>
-          {options.map((option) => {
-            return <option value={option}>{option}</option>;
+          {options.map((option, key) => {
+            return (
+              <option value={option} key={key}>
+                {option}
+              </option>
+            );
           })}
         </select>
       </div>

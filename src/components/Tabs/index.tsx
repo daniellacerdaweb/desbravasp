@@ -24,7 +24,7 @@ export const Tabs = () => {
       <ul className="flex flex-wrap -mb-px justify-between">
         {regioes.map((item, index) => {
           return (
-            <li className="me-2">
+            <li className="me-2" key={index}>
               <a
                 onClick={() => setCurrent(index)}
                 className={current === index ? classItem : classItem2}
