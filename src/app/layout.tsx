@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   description:
     "O melhor Guia de SP na palma da sua mão, Gastronomia - Passeios - Viagens ",
 };
+export const revalidate = 10; // revalidate at most every hour
 
 export default function RootLayout({
   children,

@@ -1,5 +1,3 @@
-"use client";
-
 import { InputText } from "@/components/Form/InputText";
 import { Select } from "@/components/Form/Select";
 import RestaurantIcon from "@mui/icons-material/Restaurant";
@@ -7,16 +5,29 @@ import SearchIcon from "@mui/icons-material/Search";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import SendIcon from "@mui/icons-material/Send";
 import { Tabs } from "@/components/Tabs";
-export const revalidate = 1; // revalidate at most every hour
 
-export default function Home() {
-  const image = Math.floor(Math.random() * 6) + 1;
-  console.log(image);
+async function getData() {
+  const res = await fetch(`${process.env.NEXT_PUBLIC}/api/banner`);
+  // The return value is *not* serialized
+  // You can return Date, Map, Set, etc.
+
+  if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error("Failed to fetch data");
+  }
+
+  return res.json();
+}
+
+export default async function Home() {
+  const data = await getData();
+  console.log();
+
   return (
     <main className="flex flex-col min-h-screen items-center ">
       <div
         style={{
-          background: `url(/banner/${image}.png)`,
+          background: `url(/banner/${data.image}.png)`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
         }}
