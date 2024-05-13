@@ -33,7 +33,7 @@ export default async function Home() {
         }}
         className={`h-[750px] w-full flex  items-center justify-center`}
       >
-        <div className="flex w-full max-w-7xl ">
+        <div className="flex w-full max-w-7xl px-4 ">
           <div className="flex flex-col bg-white   w-full   max-w-xl   rounded-md p-10 gap-2">
             <h1 className="text-3xl text-gray-800">
               Descubra os Melhores{" "}
