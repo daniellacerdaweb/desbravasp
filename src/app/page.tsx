@@ -7,7 +7,7 @@ import SendIcon from "@mui/icons-material/Send";
 import { Tabs } from "@/components/Tabs";
 
 async function getData() {
-  const res = await fetch(`https://desbravasp.onrender.com/api/banner`);
+  const res = await fetch(`https://youtubeapp-fb07a.firebaseio.com/items.json`);
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
 
@@ -15,19 +15,19 @@ async function getData() {
     // This will activate the closest `error.js` Error Boundary
     throw new Error("Failed to fetch data");
   }
+  const numeroAleatorio = Math.floor(Math.random() * 6) + 1;
 
-  return res.json();
+  return numeroAleatorio;
 }
 
 export default async function Home() {
   const data = await getData();
-  console.log();
 
   return (
     <main className="flex flex-col min-h-screen items-center ">
       <div
         style={{
-          background: `url(/banner/${data.image}.png)`,
+          background: `url(/banner/${data}.png)`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
         }}
