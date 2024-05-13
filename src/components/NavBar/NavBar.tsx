@@ -17,16 +17,35 @@ export const NavBar = () => {
 
   const social = [<FacebookIcon />, <InstagramIcon />, <YouTubeIcon />];
   const [open, setOpen] = useState(false);
+
+  const SocialMedia = () => {
+    return (
+      <ul className=" flex justify-between  p-4 md:p-0 mt-4  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+        {social.map((icon, key) => {
+          return (
+            <li key={key}>
+              <a
+                href="#"
+                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              >
+                {icon}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    );
+  };
   return (
     <nav className="bg-white border-gray-200 dark:bg-gray-900">
-      <div className="flex flex-wrap items-center justify-between mx-auto p-4">
+      <div className="flex flex-wrap items-center max-w-7xl justify-between mx-auto p-4">
         <a
           href="https://flowbite.com/"
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
           <img
             src="logo-desbrava-sao-paulo-horizontal.png"
-            className="h-8"
+            className="h-12"
             alt="Desbrava SP Logo"
           />
         </a>
@@ -56,7 +75,9 @@ export const NavBar = () => {
           </svg>
         </button>
         <div
-          className={`${!open ? "hidden" : ""} w-full md:block md:w-auto`}
+          className={`${
+            !open ? "hidden" : ""
+          } w-full absolute right-0 top-14 md:block md:relative md:top-0  md:w-auto`}
           id="navbar-default"
         >
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
@@ -65,30 +86,20 @@ export const NavBar = () => {
                 <li key={item}>
                   <a
                     href="#"
-                    className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                    className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                   >
                     {item}
                   </a>
                 </li>
               );
             })}
+            <div className="block md:hidden">
+              <SocialMedia />
+            </div>
           </ul>
         </div>
         <div className="hidden md:block">
-          <ul className="hiddenfont-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-            {social.map((icon, key) => {
-              return (
-                <li key={key}>
-                  <a
-                    href="#"
-                    className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                  >
-                    {icon}
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
+          <SocialMedia />
         </div>
       </div>
     </nav>
