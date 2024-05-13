@@ -7,7 +7,7 @@ import SendIcon from "@mui/icons-material/Send";
 import { Tabs } from "@/components/Tabs";
 
 async function getData() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC}/api/banner`);
+  const res = await fetch(`https://desbravasp.onrender.com/api/banner`);
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
 
