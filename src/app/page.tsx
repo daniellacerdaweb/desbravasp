@@ -7,6 +7,8 @@ import SearchIcon from "@mui/icons-material/Search";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import SendIcon from "@mui/icons-material/Send";
 import { Tabs } from "@/components/Tabs";
+export const revalidate = 1; // revalidate at most every hour
+
 export default function Home() {
   const image = Math.floor(Math.random() * 6) + 1;
   console.log(image);
