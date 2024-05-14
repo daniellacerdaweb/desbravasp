@@ -5,7 +5,7 @@ interface Title {
 export const Title = ({ type }: Title) => {
   const title = {
     max: "text-4xl",
-    med: "text-xl",
+    med: "text-2xl",
     min: "text-lg",
   };
   return (

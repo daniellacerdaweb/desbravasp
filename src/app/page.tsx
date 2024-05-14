@@ -34,11 +34,24 @@ export default async function Home() {
       <div className="px-2 md:px-0 flex  w-full max-w-7xl">
         <Highlight type="max" />
       </div>
-      <div className="px-2 md:px-0 flex md:flex-wrap  w-full max-w-7xl gap-2">
+      {/* <div className="px-2 md:px-0 flex flex-wrap  md:flex-nowrap  w-full max-w-7xl gap-4 ">
+        <Highlight type="med" />
+        <Highlight type="med" />
+        <Highlight type="med" />
+      </div> */}
+
+      <div className="px-2 md:px-0 flex flex-wrap  md:flex-nowrap  w-full max-w-7xl gap-4 ">
         <Highlight type="med" />
         <Highlight type="med" />
         <Highlight type="med" />
         <Highlight type="med" />
+      </div>
+
+      <div className="px-2 md:px-0 flex flex-wrap  md:flex-nowrap  w-full max-w-7xl gap-4 ">
+        <Highlight type="min" />
+        <Highlight type="min" />
+        <Highlight type="min" />
+        <Highlight type="min" />
       </div>
     </main>
   );
