@@ -33,7 +33,7 @@ export const Select = ({
           ref={selectRef}
           required={required}
           id={name}
-          className="appearance-none   text-xl  w-full "
+          className="appearance-none   text-xl  w-full bg-white"
           style={{
             backgroundRepeat: "no-repeat",
             backgroundPositionX: "right",

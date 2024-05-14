@@ -3,3 +3,6 @@
 @tailwind utilities;
 
 
+.debug{
+  border:'1px solid #f50'
+}

@@ -14,7 +14,6 @@ export const NavBar = () => {
     "Promoções",
     "Contato",
   ];
-
   const social = [<FacebookIcon />, <InstagramIcon />, <YouTubeIcon />];
   const [open, setOpen] = useState(false);
 
@@ -40,7 +39,7 @@ export const NavBar = () => {
     <nav className="bg-white border-gray-200 dark:bg-gray-900">
       <div className="flex flex-wrap items-center max-w-7xl justify-between mx-auto p-4">
         <a
-          href="https://flowbite.com/"
+          href="https://desbravasp.com.br"
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
           <img
