@@ -27,10 +27,10 @@ export default async function Home() {
   const data = await getData();
 
   return (
-    <main className="flex flex-col min-h-screen items-center  ">
+    <main className="flex flex-col min-h-screen items-center px-1 md:px-0  ">
       <BannerHome image={`${data}`} />
       <div className="w-full  flex justify-center  my-2 ">
-        <div className="w-full max-w-7xl">
+        <div className="w-full max-w-7xl px-2">
           <Tabs />
         </div>
       </div>
