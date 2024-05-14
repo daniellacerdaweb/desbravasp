@@ -3,6 +3,13 @@
 @tailwind utilities;
 
 
-.debug{
+.debug {
   border:'1px solid #f50'
 }
+@layer components {
+  .debug {
+    border:'1px solid #f50'
+  }
+}
+
+
