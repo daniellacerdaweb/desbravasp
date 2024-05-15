@@ -64,12 +64,14 @@ export const SearchHome = () => {
             "ABC",
           ]}
         />
-        <button
-          type="button"
-          className="px-6 py-3.5 text-xl font-medium text-white  items-center bg-[#A20101] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-        >
-          Buscar
-        </button>
+        <a href="/search">
+          <button
+            type="button"
+            className=" w-full md:max-w-full px-6 py-3.5 text-xl font-medium text-white  items-center bg-primary-500 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          >
+            Buscar
+          </button>
+        </a>
       </form>
     </div>
   );

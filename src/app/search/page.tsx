@@ -28,10 +28,13 @@ export default async function Home() {
 
   return (
     <main className="flex flex-col min-h-screen items-center px-1 md:px-0  ">
-      <BannerHome image={`${data}`} type={false} />
+      <BannerHome image={`${data}`} />
       <div className="w-full  flex justify-center  my-2 ">
         <div className="w-full max-w-7xl px-2">
-          <Tabs />
+          Buscar:{" "}
+          <strong className="text-primary-500">Restaurante Japones</strong> |
+          Categoria: <strong className="text-primary-500">Restaurante </strong>|
+          <strong className="text-primary-500"> Zona Leste</strong>
         </div>
       </div>
       <div className="px-2 md:px-0 flex  w-full max-w-7xl">

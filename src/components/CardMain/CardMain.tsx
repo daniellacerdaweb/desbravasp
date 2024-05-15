@@ -1,13 +1,17 @@
+"use client";
+
 import { Money } from "../Money";
 import { Star } from "../Star";
 import { Title } from "./Title";
 import Image from "next/image";
 import AccessibleIcon from "@mui/icons-material/Accessible";
 import { Button } from "../Form/Button";
+import { useRouter } from "next/navigation";
 
 export const CardMain = () => {
+  const router = useRouter();
   return (
-    <div className=" w-full max-w-7xl ">
+    <div className=" w-full max-w-7xl " onClick={() => router.push("/teste")}>
       <div className="grid md:grid-cols-5   gap-6  shadow-inner bg-white p-4 border rounded-lg md:h-80 md:max-h-80">
         <div className="col-span-3 h-80 md:h-auto relative">
           <Image
@@ -34,8 +38,13 @@ export const CardMain = () => {
               Santo André, a churrascaria sempre atendeu com requinte e bom
               gosto os mais exigente paladares.
             </div>
-            <Button label="Mais Informações" />
-            <Button label="Fazer Reserva" variable="secondary" />
+            <div
+              onClick={() => router.push("/teste")}
+              className="flex flex-col gap-2"
+            >
+              <Button label="Mais Informações" />
+              <Button label="Fazer Reserva" variable="secondary" />
+            </div>
           </div>
         </div>
       </div>

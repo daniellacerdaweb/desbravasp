@@ -1,9 +1,12 @@
+"use client";
+
 import { Money } from "../Money";
 import { Star } from "../Star";
 import { Title } from "./Title";
 import Image from "next/image";
 import AccessibleIcon from "@mui/icons-material/Accessible";
 import { Button } from "../Form/Button";
+import { useRouter } from "next/navigation";
 
 const teste = (
   <div className="grid md:grid-rows-2 shadow-md p-4 border rounded-lg ">
@@ -28,8 +31,12 @@ const teste = (
   </div>
 );
 export const CardMed = () => {
+  const router = useRouter();
   return (
-    <div className="shadow-inner bg-white border px-3 py-2 rounded-lg cursor-pointer">
+    <div
+      className="shadow-inner bg-white border px-3 py-2 rounded-lg cursor-pointer"
+      onClick={() => router.push("/teste")}
+    >
       <div className="flex flex-col gap-2">
         <h3 className="text-2xl">D’Brescia</h3>{" "}
         <div className="flex">
